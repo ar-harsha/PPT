@@ -43,9 +43,9 @@ def display(root):
 
 def deletelast(head,key):
     cur = head;
+    prev = None
     if(cur.data == key):prev= cur
     else:prev = None
-    prev = None
     while(cur.next!=None):
         temp = cur.next
         if(temp.data == key and temp!=None):

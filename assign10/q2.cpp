@@ -2,21 +2,15 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int eliminate(vector<int> &arr){
-	int head = arr[0],step = 1;
-	bool dir = true;
-	while(arr.size()>1)
-		if(dir)
-			head+=step;
-		else
-			head+= n%2==0 
+int eliminate(int n){
+	if(n==1) return 1;
+	return 2*(1+n/2 - eliminate(n/2));
 
 }
 
 int main(){
-	vector<int> v1{1,2,3,4,5,6,7,8,9};
 	
-	int ans = eliminate(v1);
+	int ans = eliminate(n);
 	
 	return 0;
 }
